@@ -8,7 +8,7 @@ var ResultPage = function() {
   
   this.containsString = async function(searchResultString) {
 
-    var element = await myDriver.findElement(By.xpath("//h3[contains(text(), '" + searchResultString + "')]"));
+    var element = await myDriver.findElement(By.xpath("//*[contains(text(), '" + searchResultString + "')]"));
 
     expect(await element.getText()).to.equal(searchResultString);
 
