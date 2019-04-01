@@ -15,6 +15,7 @@
   "dependencies": {
     "appium-mac-driver": "^1.4.1",
     "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "cucumber": "^5.1.0",
     "wd": "^1.11.1"
   }

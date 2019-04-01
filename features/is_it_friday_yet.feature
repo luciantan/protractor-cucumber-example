@@ -14,4 +14,4 @@ Feature: Is it Friday yet?
   Scenario: search for protractor
   Given I opened workstation
   When I search in workstation for "airline"
-  Then The search box should contain "airline"
+  Then The search popup should contain "airline"
