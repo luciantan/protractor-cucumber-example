@@ -54,6 +54,7 @@ var WorkstationMainWindow = function() {
 
       await workstationApp.sleep(500);
       let popup = workstationApp.elementByXPath(popupPath);
+      popup.moveTo();
       return popup.isDisplayed();
       
     } catch (err) {
@@ -61,6 +62,24 @@ var WorkstationMainWindow = function() {
         return false;
     }
 
+  }
+
+  this.closeWorkstation = async function() {
+    let closeWorkstationButtonPath = "/AXApplication[@AXTitle='MicroStrategy Workstation']/AXWindow[@AXTitle='MicroStrategy Workstation - Environments' and @AXSubrole='AXStandardWindow']/AXButton[@AXSubrole='AXCloseButton']";
+    try {
+
+      await workstationApp.sleep(500);
+      let closeWorkstationButton = workstationApp.elementByXPath(closeWorkstationButtonPath);
+      closeWorkstationButton.moveTo();
+      await workstationApp.sleep(500);
+      await workstationApp.buttonDown();
+      await workstationApp.sleep(500);
+      await workstationApp.buttonUp();
+      await workstationApp.sleep(500);
+      
+    } catch (err) {
+        console.log(err);
+    }
   }
 
   this.message = "hello~ I am workstation window";

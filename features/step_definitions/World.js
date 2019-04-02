@@ -12,6 +12,7 @@ function CustomWorld() {
   this.resultPage = require('../../pages/resultPage');
   this.workstationMainWindow = require('../../pages/workstationMainWindow');
   this.expect = expect;
+  this.workstationApp = null;
 }
 
 setWorldConstructor(CustomWorld);

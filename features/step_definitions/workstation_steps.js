@@ -1,10 +1,5 @@
 const { Given, When, Then } = require('cucumber');
-
-// var chai = require('chai');
-// var chaiAsPromised = require('chai-as-promised');
-
-// chai.use(chaiAsPromised);
-// var expect = chai.expect;
+var {After, Before} = require('cucumber');
 
 Given('I opened workstation', async function () {
   
@@ -24,3 +19,8 @@ Then('The search popup should contain {string}', async function (string) {
   await this.expect(this.workstationMainWindow.popupExist()).become(true);
 
 });
+
+After (async function() {
+  await this.workstationMainWindow.closeWorkstation();
+})
+
