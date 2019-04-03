@@ -21,7 +21,7 @@ Then('The search popup should contain {string}', {timeout: 100000}, async functi
 
 });
 
-After (async function() {
+After ({tags: "@workstation"}, async function() {
 
   await this.workstationMainWindow.closeWorkstation();
   

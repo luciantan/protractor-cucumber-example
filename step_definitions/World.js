@@ -8,10 +8,10 @@ var expect = chai.expect;
 
 function CustomWorld() {
   console.log("I am called by cucumber");
-  this.googlePage = require('../../pages/googlePage');
-  this.resultPage = require('../../pages/resultPage');
-  this.workstationMainWindow = require('../../pages/workstationMainWindow');
-  this.quickSearchPage = require('../../pages/quickSearchPage');
+  this.googlePage = require('../pages/competitor/googlePage');
+  this.googleSearchResultPage = require('../pages/competitor/googleSearchResultPage');
+  this.workstationMainWindow = require('../pages/wsNativeWindows/workstationMainWindow');
+  this.quickSearchPage = require('../pages/wsWebViews/quickSearchPage');
   this.expect = expect;
   this.workstationApp;
   this.sessionID;
