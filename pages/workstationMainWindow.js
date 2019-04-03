@@ -20,6 +20,8 @@ var WorkstationMainWindow = function() {
       let sessionID = await workstationApp.getSessionId();
       console.log(`session id: ${sessionID}`);
 
+      return sessionID;
+
     } catch (err) {
         console.log(err);
         return false;
@@ -31,7 +33,6 @@ var WorkstationMainWindow = function() {
     let searchBoxPath = "/AXApplication[@AXTitle='MicroStrategy Workstation']/AXWindow[@AXTitle='MicroStrategy Workstation - Environments']/AXToolbar[0]/AXGroup[4]/AXTextField[@AXSubrole='AXSearchField']";
 
     try {
-      console.log(searchString);
       let searchBox = await workstationApp.elementByXPath(searchBoxPath);
       await searchBox.moveTo();
       await workstationApp.sleep(500);
@@ -81,8 +82,6 @@ var WorkstationMainWindow = function() {
         console.log(err);
     }
   }
-
-  this.message = "hello~ I am workstation window";
 
 }
 

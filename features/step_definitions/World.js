@@ -11,8 +11,10 @@ function CustomWorld() {
   this.googlePage = require('../../pages/googlePage');
   this.resultPage = require('../../pages/resultPage');
   this.workstationMainWindow = require('../../pages/workstationMainWindow');
+  this.quickSearchPage = require('../../pages/quickSearchPage');
   this.expect = expect;
-  this.workstationApp = null;
+  this.workstationApp;
+  this.sessionID;
 }
 
 setWorldConstructor(CustomWorld);

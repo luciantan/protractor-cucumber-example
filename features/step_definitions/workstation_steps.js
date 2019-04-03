@@ -1,26 +1,29 @@
 const { Given, When, Then } = require('cucumber');
 var {After, Before} = require('cucumber');
 
-Given('I opened workstation', async function () {
-  
-  console.log(await this.workstationMainWindow.message);
+Given('I opened workstation', {timeout: 100000}, async function () {
 
-  await this.workstationMainWindow.startWorkstation();
+  this.sessionID = await this.workstationMainWindow.startWorkstation();
+
 });
 
-When('I search in workstation for {string}', async function (searchString) {
+When('I search in workstation for {string}', {timeout: 100000}, async function (searchString) {
   
   await this.workstationMainWindow.search(searchString);
   
 });
 
-Then('The search popup should contain {string}', async function (string) {
-  
-  await this.expect(this.workstationMainWindow.popupExist()).become(true);
+Then('The search popup should contain {string}', {timeout: 100000}, async function (string) {
+
+  await this.expect(this.quickSearchPage.popupExist(this.sessionID)).become(true);
+
+  // await this.expect(this.workstationMainWindow.popupExist()).become(true);
 
 });
 
 After (async function() {
+
   await this.workstationMainWindow.closeWorkstation();
+  
 })
 

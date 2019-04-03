@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "launch-appium" : "appium --address 127.0.0.1 --port 4723 ",
+    "protractor-test" : "protractor conf.js"
   },
   "keywords": [],
   "author": "",
