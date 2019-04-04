@@ -22,5 +22,5 @@ Feature: Is it Friday yet?
 @workstation
   Scenario: search for airline in workstation
   Given I opened workstation
-  When I search in workstation for "airline"
-  Then The search popup should contain "airline"
+  When I search in workstation for "cef"
+  Then The search popup should contain "cef"

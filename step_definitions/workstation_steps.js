@@ -15,7 +15,9 @@ When('I search in workstation for {string}', {timeout: 100000}, async function (
 
 Then('The search popup should contain {string}', {timeout: 100000}, async function (string) {
 
-  await this.expect(this.quickSearchPage.popupExist(this.sessionID)).become(true);
+  await this.quickSearchPage.webViewIsDisplayed();
+
+  // await this.expect(this.quickSearchPage.popupExist(this.sessionID)).become(true);
 
 });
 

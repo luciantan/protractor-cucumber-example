@@ -25,6 +25,28 @@ var QuickSearchPage = function() {
 
   }
 
+  this.webViewIsDisplayed = async function() {
+
+    await browser.sleep(3000);
+    // await browser.findElement(By.name("q")).sendKeys("MicroStrategy");
+    //*[contains(text(),'cef')]
+    console.log('check view');
+    let elem = browser.findElement(By.xpath("//*[contains(text(),'cef')]"));
+    console.log(await elem.getText());
+    await elem.click();
+
+    // await workstationApp.sleep(500);
+    // await workstationApp.buttonDown();
+    // await workstationApp.sleep(500);
+    // await workstationApp.buttonUp();
+    // await workstationApp.sleep(500);
+
+    await browser.sleep(3000);
+    await browser.actions().sendKeys(protractor.Key.ENTER).perform();
+    await browser.sleep(3000);
+
+  }
+
   this.message = "hello~ I am quick search popup page";
 
 }

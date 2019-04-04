@@ -4,8 +4,14 @@ exports.config = {
 
   // baseUrl: 'https://angularjs.org/',
 
+  // chromeDriver: "3rdParty/chromedriver",
+  // directConnect: true,
+
   capabilities: {
-      browserName:'chrome'
+      browserName:'chrome',
+      // 'chromeOptions': {
+      //   'debuggerAddress': '127.0.0.1:54213'
+      // }
   },
 
   framework: 'custom',  // set to "custom" instead of cucumber.

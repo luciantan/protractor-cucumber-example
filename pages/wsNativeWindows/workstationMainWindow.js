@@ -12,7 +12,7 @@ var WorkstationMainWindow = function() {
       await workstationApp.init({
         platformName: 'Mac',
         deviceName: 'Mac',
-        app: '/Applications/workstation-mac-11.1.1.10701.app',
+        app: '/Applications/MicroStrategy Workstation with CEF 2.app',
         newCommandTimeout: 100000,        
       });
       
@@ -42,6 +42,11 @@ var WorkstationMainWindow = function() {
       await workstationApp.sleep(500);
       await searchBox.sendKeys(searchString); 
       await workstationApp.sleep(500);
+
+      // await workstationApp.buttonDown();
+      // await workstationApp.sleep(500);
+      // await workstationApp.buttonUp();
+
     } catch (err) {
       console.log(err);
       return false;
