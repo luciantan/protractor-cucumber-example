@@ -24,8 +24,8 @@ exports.config = {
     // format: ["pretty"],            // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
     // 'dry-run': false,              // <boolean> invoke formatters without executing steps
     // compiler: []                   // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
-    tags: ['@workstation',],
-    // tags: ['@competitor',],
+    // tags: ['@workstation',],
+    tags: ['@competitor',],
   },
 
  onPrepare: async function () {
