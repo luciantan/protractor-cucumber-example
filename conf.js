@@ -21,11 +21,11 @@ exports.config = {
     require: ['./step_definitions/**/*.js'],  // require step definition files before executing features
     // tags: [],                      // <string[]> (expression) only execute the features or scenarios with tags matching the expression
     // strict: true,                  // <boolean> fail if there are any undefined or pending steps
-    // // format: ["pretty"],            // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
+    // format: ["pretty"],            // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
     // 'dry-run': false,              // <boolean> invoke formatters without executing steps
     // compiler: []                   // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
-    // tags: ['@workstation',],
-    tags: ['@competitor',],
+    tags: ['@workstation',],
+    // tags: ['@competitor',],
   },
 
  onPrepare: async function () {
