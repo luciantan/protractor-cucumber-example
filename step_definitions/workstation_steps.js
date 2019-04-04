@@ -17,8 +17,6 @@ Then('The search popup should contain {string}', {timeout: 100000}, async functi
 
   await this.expect(this.quickSearchPage.popupExist(this.sessionID)).become(true);
 
-  // await this.expect(this.workstationMainWindow.popupExist()).become(true);
-
 });
 
 After ({tags: "@workstation"}, async function() {
