@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "protractor-flake  -- conf.js",
+    "launch-appium": "appium --address 127.0.0.1 --port 4723 ",
+    "protractor-test": "protractor conf.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,12 @@
     "protractor-cucumber-framework": "^6.1.1"
   },
   "dependencies": {
+    "appium-mac-driver": "^1.4.1",
     "chai": "^4.2.0",
-    "cucumber": "^5.1.0"
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^5.1.0",
+    "protractor": "^5.4.2",
+    "protractor-flake": "^4.0.0",
+    "wd": "^1.11.1"
   }
 }

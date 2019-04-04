@@ -9,7 +9,9 @@ Given('I am on the Google search page', async function () {
 
 When('I search for {string}', async function (searchString) {
 
-  await this.googlePage.searchString(searchString)
+  await this.googlePage.searchString(searchString);
+
+  // await this.workstationMainWindow.startWorkstation();
   
 });
 
